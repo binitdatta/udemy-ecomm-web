@@ -8,9 +8,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringBootApplication
 @EnableZuulProxy
 @EnableDiscoveryClient
-public class OcrWebApplication {
+public class UdemyWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OcrWebApplication.class, args);
+		SpringApplication.run(UdemyWebApplication.class, args);
 	}
 }

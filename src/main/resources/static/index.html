@@ -1,53 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Sample Page - Easy BootStrap</title>
+<meta name="description" content="Course files for the most awesome Bootstrap 3 course on Udemy.">
+<meta name="author" content="Gobala Krishnan">
+<!-- Bootstrap & Fontawesome -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-    <title>OCR Races</title>
+<!-- Start Bootswatch Themes (Uncomment the one you want to use. More info at http://www.bootswatch.com) -->
+<!-- <link href="assets/themes/cerulean.css" rel="stylesheet"> -->
+<!--<link href="assets/themes/cosmo.css" rel="stylesheet">-->
+<!--<link href="assets/themes/cyborg.css" rel="stylesheet">-->
+<!--<link href="assets/themes/darkly.css" rel="stylesheet">-->
+<!--<link href="assets/themes/flatly.css" rel="stylesheet">-->
+<!--<link href="assets/themes/journal.css" rel="stylesheet">-->
+<!--<link href="assets/themes/lumen.css" rel="stylesheet">-->
+<!--<link href="assets/themes/paper.css" rel="stylesheet">-->
+<!--<link href="assets/themes/readable.css" rel="stylesheet">-->
+<!--<link href="assets/themes/sandstone.css" rel="stylesheet">-->
+<!--<link href="assets/themes/simplex.css" rel="stylesheet">-->
+<!--<link href="assets/themes/slate.css" rel="stylesheet">-->
+<!--<link href="assets/themes/spacelab.css" rel="stylesheet">-->
+<!--<link href="assets/themes/superhero.css" rel="stylesheet">-->
+<!--<link href="assets/themes/united.css" rel="stylesheet">-->
+<!--<link href="assets/themes/yeti.css" rel="stylesheet">-->
+<!-- End Bootswatch Themes -->
 
-    <!-- Bootstrap core CSS -->
-    <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Start custom CSS (Your own theme, overrides all of the above styles) -->
+<!--<link href="assets/themes/custom.css" rel="stylesheet">-->
+<!-- End Custom CSS -->
 
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
 
-  <body data-pinterest-extension-installed="cr1.38.4" class=" hasGoogleVoiceExt" ng-app="ocrApp">
-
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-        </nav>
-        <h3 class="text-muted">OCR Races</h3>
+<!-- Start Inline CSS. (This overrides all of the above styles) -->
+<style type="text/css">
+.jumbotron,
+.page {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	margin-bottom: 0px;
+}
+</style>
+<!-- End Inline CSS -->
+</head>
+<body style="padding-top:50px;" ng-app="udemyApp">
+<!-- Start Navigation Bar -->
+<nav id="topnavigation" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnav" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#">Brand</a> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id="topnav" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="template.html"><i class="fa fa-cubes"></i> Templates</a></li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-list-alt"></i> Features <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#headline">Main Headline <span class="label label-success">NEW!</span></a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#carousel">Full-Width Carousel</a></li>
+            <li><a href="#tabs">Multi-Content Tabs</a></li>
+            <li><a href="#features">Features Column</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#thumbnails">Killer Thumbnails</a></li>
+            <li><a href="#elements">Multi-Element Page</a></li>
+            <li><a href="#signup">Pricing Tables</a></li>
+            <li><a href="#footer">Functional Footer</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      	<p class="navbar-text"><img src="images/avatar02.jpg" width="18" class="img-circle"> Welcome back, Connie!</p>
+        <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<!-- End Navigation Bar -->
+<!-- Start Section -->
+<div id="headline" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Hello, world!</h1>
+        <p>Let's start an awesome BootStrap project :)</p>
       </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+ <div ng-view=""></div>
+<!-- Start Section -->
+<div id="testimonials" class="jumbotron" style="background:transparent;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-3">
+            <p>&nbsp;</p>
+            <p><a href="http://uifaces.com/kolage" target="_blank"><img src="images/avatar01.jpg" alt="@soffes" class="img-circle img-responsive"></a></p>
+          </div>
+          <div class="col-md-8 col-sm-3 col-xs-9">
+            <blockquote>
+              <h3>&quot;Simply Wonderful.&quot;</h3>
+              <p>Your product was an absolute joy to use, and it has already helped me achieve my goals this year!</p>
+              <footer>Guy Williams, <cite>Founder, Bootstrap-less</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-3">
+            <p>&nbsp;</p>
+            <p><a href="http://uifaces.com/madysondesigns" target="_blank"><img src="images/avatar02.jpg" alt="@soffes" class="img-circle img-responsive"></a></p>
+          </div>
+          <div class="col-md-8 col-sm-3 col-xs-9">
+            <blockquote>
+              <h3>&quot;Well Worth The Price!&quot;</h3>
+              <p>I had a blast at this event, and I can't wait for the next one!</p>
+              <footer>Connie Burgher, <cite>PR Executive</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Carousel -->
+   <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="images/carousel01.jpg" alt="First slide">
+          </div>
+          <div class="item">
+            <img src="images/carousel02.jpg" alt="Second slide">
+          </div>
+          <div class="item">
+            <img src="images/carousel03.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+<!-- End Carousel -->
+<!-- Start Section -->
+<div id="tabs" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> 
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">Responsive Video</a></li>
+          <li role="presentation"><a href="#tab2" data-toggle="tab">Embedded Map</a></li>
+          <li role="presentation"><a href="#tab3" data-toggle="tab">Responsive Table</a></li>
+        </ul>
+        <p></p>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" width="853" height="480" src="https://www.youtube.com/embed/dlacyYNHEr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab2">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6345.022861467272!2d-122.03233!3d37.3303991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b6c386ca17%3A0x76c265bfa5a8038a!2sApple!5e0!3m2!1sen!2smy!4v1436187953486" width="800" height="600" frameborder="0" style="border:0" allowfullscreen class="embed-responsive-item"></iframe>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab3">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>Ticket Type</th>
+                  <th>Start</th>
+                  <th>End</th>
+                  <th>Price</th>
+                  <th>Availability</th>
+                </tr>
+                <tr>
+                  <td>Super Early Bird Pass</td>
+                  <td>15 June 2015</td>
+                  <td>30 June 2015</td>
+                  <td>$69</td>
+                  <td><span class="label label-danger">SOLD OUT</span></td>
+                </tr>
+                <tr>
+                  <td>Early Bird Pass</td>
+                  <td>1 August 2015</td>
+                  <td>31 August 2015</td>
+                  <td>$99</td>
+                  <td><span class="label label-warning">LIMITED</span></td>
+                </tr>
+                <tr>
+                  <td>Standard Pass</td>
+                  <td>1 September 2015</td>
+                  <td>12 December 2015</td>
+                  <td>$129</td>
+                  <td><span class="label label-success">AVAILABLE</span></td>
+                </tr>
+                <tr>
+                  <td>Walk-in Registration</td>
+                  <td>13 December 2015</td>
+                  <td>13 December 2015</td>
+                  <td>$199</td>
+                  <td><span class="label label-default">NOT AVAILABLE</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>An Event You Will Never Forget</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+        <p><a href="#signup" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> Sign Up Now</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Section -->
+<div id="features" class="jumbotron" style="background:transparent;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center palette-headline">
+        <h1 class="text-capitalize">Image-Based Content Blocks<br>
+          <small>Perfect For Listing Main Benefits</small></h1>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p><img src="images/icons/png/Retina-Ready.png" width="168" height="150" alt="benefit"> </p>
+        <p>&nbsp; </p>
+        <h4 class="text-capitalize">Benefit #1 Here</h4>
+        <p class="text-muted"><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</small></p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p><img src="images/icons/png/Chat.png" width="150" height="150" alt="benefit"></p>
+        <p>&nbsp; </p>
+        <h4 class="text-capitalize">Benefit #2 Here</h4>
+        <p class="text-muted"><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</small></p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p><img src="images/icons/png/Calendar.png" width="150" height="150" alt="benefit"></p>
+        <p>&nbsp; </p>
+        <h4 class="text-capitalize">Benefit #3 Here</h4>
+        <p class="text-muted"><small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</small></p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Section -->
+<div id="thumbnails" class="jumbotron">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Thumbnail Images  &amp; Content<br>
+          <small>Showcase Your Work in Style</small></h1>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail"><a href="https://www.flickr.com/photos/whitedesertsun/12517967394" title="Katsucon 2013 Cosplay by Genia Baida, on Flickr"><img src="images/thumb01.jpg" width="534" height="800" alt="Katsucon 2013 Cosplay"></a>
+          <div class="caption">
+            <h4>Thumbnail label</h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy..</p>
+            <div class="btn-toolbar">
+              <div class="btn-group btn-group-sm pull-left"> <a href="#" class="btn btn-primary" role="button"><i class="fa fa-share"></i> Share It </a> <a href="#" class="btn btn-success" role="button"><i class="fa fa-heart-o"></i></a> </div>
+              <div class="btn-group btn-group-sm pull-right dropup"><a href="#" class="btn btn-default dropdown-toggle" role="button" data-toggle="dropdown"><i class="fa fa-bars"></i> More</a>
+                <ul class="dropdown-menu pull-right">
+                  <li class="dropdown-header">Similar Items</li>
+                  <li><a href="#">Item #1 Here</a></li>
+                  <li><a href="#">Item #2 Here</a></li>
+                  <li><a href="#">Item #3 Here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="text-danger">Report This</a></li>
+                  <li><a href="#">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail"> <a href="https://www.flickr.com/photos/whitedesertsun/15617055191" title="Ariel by Courtoon Colossalcon 2014 The Little Mermaid Cosplay by Genia Baida, on Flickr"><img src="images/thumb02.jpg" width="534" height="800" alt="Ariel by Courtoon Colossalcon 2014 The Little Mermaid Cosplay"></a>
+          <div class="caption">
+            <h4>Thumbnail label </h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy..</p>
+            <div class="btn-toolbar">
+              <div class="btn-group btn-group-sm pull-left"> <a href="#" class="btn btn-primary" role="button"><i class="fa fa-share"></i> Share It </a> <a href="#" class="btn btn-success" role="button"><i class="fa fa-heart-o"></i></a> </div>
+              <div class="btn-group btn-group-sm pull-right dropup"><a href="#" class="btn btn-default dropdown-toggle" role="button" data-toggle="dropdown"><i class="fa fa-bars"></i> More</a>
+                <ul class="dropdown-menu pull-right">
+                  <li class="dropdown-header">Similar Items</li>
+                  <li><a href="#">Item #1 Here</a></li>
+                  <li><a href="#">Item #2 Here</a></li>
+                  <li><a href="#">Item #3 Here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="text-danger">Report This</a></li>
+                  <li><a href="#">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail"> <a href="https://www.flickr.com/photos/whitedesertsun/12517229664" title="Katsucon 2013 Cosplay by Genia Baida, on Flickr"><img src="images/thumb03.jpg" width="534" height="800" alt="Katsucon 2013 Cosplay"></a>
+          <div class="caption">
+            <h4>Thumbnail label </h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy..</p>
+            <div class="btn-toolbar">
+              <div class="btn-group btn-group-sm pull-left">
+                <a href="#" class="btn btn-primary" role="button"><i class="fa fa-share"></i> Share It </a>
+                <a href="#" class="btn btn-success" role="button"><i class="fa fa-heart-o"></i></a>
+              </div>
+              <div class="btn-group btn-group-sm pull-right dropup"><a href="#" class="btn btn-default dropdown-toggle" role="button" data-toggle="dropdown"><i class="fa fa-bars"></i> More</a>
+                <ul class="dropdown-menu pull-right">
+                  <li class="dropdown-header">Similar Items</li>
+                  <li><a href="#">Item #1 Here</a></li>
+                  <li><a href="#">Item #2 Here</a></li>
+                  <li><a href="#">Item #3 Here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="text-danger">Report This</a></li>
+                  <li><a href="#">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail"><a href="https://www.flickr.com/photos/whitedesertsun/10678271874" title="Strawberry Ice Cream by Naiiki Youmacon 2013 Sakizou Cosplay by Genia Baida, on Flickr"><img src="images/thumb04.jpg" width="534" height="800" alt="Strawberry Ice Cream by Naiiki Youmacon 2013 Sakizou Cosplay"></a>
+          <div class="caption">
+            <h4>Thumbnail label </h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy..</p>
+            <div class="btn-toolbar">
+              <div class="btn-group btn-group-sm pull-left"> <a href="#" class="btn btn-primary" role="button"><i class="fa fa-share"></i> Share It </a> <a href="#" class="btn btn-success" role="button"><i class="fa fa-heart-o"></i></a> </div>
+              <div class="btn-group btn-group-sm pull-right dropup"><a href="#" class="btn btn-default dropdown-toggle" role="button" data-toggle="dropdown"><i class="fa fa-bars"></i> More</a>
+                <ul class="dropdown-menu pull-right">
+                  <li class="dropdown-header">Similar Items</li>
+                  <li><a href="#">Item #1 Here</a></li>
+                  <li><a href="#">Item #2 Here</a></li>
+                  <li><a href="#">Item #3 Here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="text-danger">Report This</a></li>
+                  <li><a href="#">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 text-center">
+        <p>&nbsp;</p>
+        <ul class="pagination pagination-lg">
+          <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo; Previous</span> </a> </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li> <a href="#" aria-label="Next"> <span aria-hidden="true">Next &raquo;</span> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Section -->
+<div id="elements" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header"><h1>Sample Elements on a Page <small>(Isn't BootStrap Awesome?)</small></h1></div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel">
+          <div class="panel-body">
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li class="active">Blog Post Name Here</li>
+            </ol>
+            <p class="lead">First line of paragraph emphasized..</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p><img src="images/carousel03.jpg" class="img-thumbnail img-responsive" width="1900" height="964" alt="..."></p>
+            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>A simple ordered list: </p>
+            <ul>
+              <li><a href="http://uifaces.com/authorized" target="_blank">Get authorized avatar faces for your mockup</a></li>
+              <li><a href="http://www.wrapbootstrap.com" target="_blank">Get simple free themes for BootStrap</a></li>
+              <li><a href="http://www.kreydle.com" target="_blank">What is Kreydle and what do we do?</a></li>
+            </ul>
+            <p>A fancy ordered list with icons: </p>
+            <ul class="fa-ul">
+              <li><a href="http://www.nichify.net" target="_blank"><i class="fa fa-li fa-external-link"></i> Build an Amazon affiliate store in 5 minutes with Nichify!</a></li>
+              <li><a href="http://uifaces.com/authorized" target="_blank"><i class="fa fa-li fa-user"></i> Get authorized avatar faces for your mockup</a></li>
+              <li><a href="http://www.wrapbootstrap.com" target="_blank"><i class="fa fa-li fa-tag"></i> Get simple free themes for BootStrap</a></li>
+            </ul>
+            <p>Some content can be <mark>highlighted by default</mark> in BootStrap. </p>
+            <div class="well">You can put content in a well to highlight it!</div>
+          </div>
+        </div>
+        </div>
+      <div class="col-md-6">
+      <a class="btn btn-info" role="button" data-toggle="collapse" href="#collapse_alertInfo" aria-expanded="true">FYI Only</a>
+      <a class="btn btn-success" role="button" data-toggle="collapse" href="#collapse_alertSuccess" aria-expanded="false">Yeah, Let's Go!</a>
+      <a class="btn btn-danger" role="button" data-toggle="collapse" href="#collapse_alertDanger" aria-expanded="false">Danger</a>
+<div class="collapse" id="collapse_alertInfo">
+<p></p>
+  <div id="collapse_alertInfo" class="alert alert-info">
+    Hey there! Pay attention to this notice because it's really, and I mean REALLY, IMPORTANTE!</a>
+  </div>
+</div>
+<div id="collapse_alertSuccess" class="collapse out">
+<p></p>
+  <div class="alert alert-success">
+    Hey there! Pay attention to this notice because it's really, and I mean REALLY, IMPORTANTE!
+  </div>
+</div>
+<div  id="collapse_alertDanger" class="collapse out">
+<p></p>
+  <div class="alert alert-danger">
+    Hey there! Pay attention to this notice because it's really, and I mean REALLY, IMPORTANTE!
+  </div>
+</div><p></p>
+</div>
+      <div class="col-md-6">
+	      <!-- Start Accordion -->
+	      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div></div>
+	      <!-- End Accordion -->
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Section -->
+<div id="signup" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Pricing &amp; Signup Options<br>
+          <small>Your Guarantee Stated Here.</small></h1>
+        <p>&nbsp;</p>
+      </div>
+      <div class="row-fluid">
+        <div class="col-md-4 text-center">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
+              <h3>Standard License<br>
+                <small>Just $19 Per Month</small></h3>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> <a href="#" rel="tooltip" title="Decription of item here">Use for One Website </a> <span class="label label-success">New!</span></li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Customize The Design &amp; Layout</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Full 1-Year Support Included</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> No Hidden Fees or Contract</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> 100% Web Based &amp; Mobile-Friendly</li>
+            </ul>
+            <div class="panel-footer"><a href="#" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> Sign Up Now</a></div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
+              <h3>Developer License<br>
+                <small>Just $19 Per Month</small></h3>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> <a href="#" rel="tooltip" title="Decription of item here">Use for One Website </a> <span class="label label-success">New!</span></li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Customize The Design &amp; Layout</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Full 1-Year Support Included</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> No Hidden Fees or Contract</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> 100% Web Based &amp; Mobile-Friendly</li>
+            </ul>
+            <div class="panel-footer"><a href="#" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> Sign Up Now</a></div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
+              <h3>Agency License<br>
+                <small>Custom Quote</small></h3>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> <a href="#" rel="tooltip" title="Decription of item here">Use for One Website </a> <span class="label label-success">New!</span></li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Customize The Design &amp; Layout</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> Full 1-Year Support Included</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> No Hidden Fees or Contract</li>
+              <li class="list-group-item"><i class="fa fa-check-circle"></i> 100% Web Based &amp; Mobile-Friendly</li>
+            </ul>
+            <div class="panel-footer"><a href="#getquote" class="btn btn-primary btn-lg" data-toggle="modal"><i class="fa fa-shopping-cart"></i> Contact Us</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
+<!-- Start Footer -->
+<footer id="footer" class="jumbotron" style="background:transparent;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Footer Section</h4>
+        <p>&nbsp;</p>
+        <p>Here's where you enter some other important stuff about you, your product or your company. You can also list your social media account links, a subscription form, and much more.</p>
+        <address>
+        <strong>Twitter, Inc.</strong><br>
+        795 Folsom Ave, Suite 600<br>
+        San Francisco, CA 94107<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+        <address>
+        <strong>Email Us Now</strong><br>
+        <a href="mailto:#">name@example.com</a>
+        </address>
+        &nbsp;
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>Latest Posts</h4>
+        <p>&nbsp;</p>
+        <ul class="media-list">
+        <li class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object" src="images/media01.jpg" width="50" alt="..."></a></div>
+          <div class="media-body">
+            <h4 class="media-heading">Blog Post Title Here</h4>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. </div>
+        </li>
+        <li class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object" src="images/media02.jpg" width="50" alt="..."> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Blog Post Title Here</h4>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. </div>
+        </li>
+        <li class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object" src="images/media03.jpg" width="50" alt="..."> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Blog Post Title Here</h4>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. </div>
+        </li>
+        <li class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object" src="images/media04.jpg" width="50" alt="..."> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Blog Post Title Here</h4>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. </div>
+        </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Live Tweets</h4>
+        <p>&nbsp;</p>
+        <p> 
+          <!-- Start Twitter Widget --> 
+          <a class="twitter-timeline" href="https://twitter.com/gobala" data-widget-id="618046173689937920" data-tweet-limit="3">Tweets by @gobala</a> 
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+          <!-- End Twitter Widget --> 
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+<!-- Start Bottom Nav -->
+<div id="bottomnav" class="jumbotron" style="padding-top:40px; padding-bottom:40px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">Copyright 2015 YourWebsite.com | <a href="#">Terms</a> | <a href="#">Privacy</a></div>
+    </div>
+  </div>
+</div>
+<!-- End Bottom Nav -->
+<!-- Start Modal -->
+<div id="getquote" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Contact Us</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+    <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" class="form-control" id="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="comments">Your Question</label>
+    <textarea name="comments" class="form-control" id="comments"></textarea>
+    <p class="help-block">Tell us what you need and we're ready to help you.</p>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Modal -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="assets/js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
 
-      <div ng-view=""></div>
-
-      <footer class="footer">
-        <p>© Company 2014</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+ <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
@@ -60,7 +701,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-touch.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/participants.js"></script>
-  
+    
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Start JS Config (This is where you configure the Bootstrap JS options) -->
 
-</body></html>
+<!-- End JS Config -->
+</body>
+</html>

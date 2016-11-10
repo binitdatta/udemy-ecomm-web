@@ -8,5 +8,14 @@ eureka:
 
 zuul:
   routes:
-    races: /races/**
-    participants: /paticipants/**      
+    product-service: /product-service/**
+
+# Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000    
+   

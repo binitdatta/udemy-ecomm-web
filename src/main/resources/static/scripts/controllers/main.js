@@ -1,10 +1,11 @@
-angular.module('ocrApp')
+angular.module('udemyApp')
   .controller('MainCtrl', function ($scope, $http) {
 	  $http({
           method: 'GET',
-          url: '/races'
+          url: 'product-service/productsservice/v1/products'
       }).then(function(response) {
-    	  $scope.races = response.data;
+    	  $scope.products = response.data;
+    	  console.log($scope.products);
       }, function(response) {
     	  console.error('Error requesting races');
       });

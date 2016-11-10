@@ -1,5 +1,5 @@
 angular
-  .module('ocrApp', [
+  .module('udemyApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -12,10 +12,6 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/participants/:raceId', {
-    	  templateUrl: 'views/participants.html',
-    	  controller: 'ParticipantsCtrl'
       })
       .otherwise({
         redirectTo: '/'

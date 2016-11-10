@@ -1,4 +1,22 @@
-<h3>Races</h3>
-<ul>
-	<li ng-repeat="race in races"><a ng-href="/#/participants/{{race.id}}">{{race.name}}</a></li>
-</ul>
+<h3>Products</h3>
+<!-- <ul>
+	<li ng-repeat="product in products">{{product.name}}</a></li>
+</ul> -->
+
+   <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>Product ID</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                </tr>
+                <tr ng-repeat="product in products">
+                  <td>{{product.id}}</td>
+                  <td>{{product.productName}}</td>
+                  <td>{{product.productType}}</td>
+                  <td>{{product.productPrice}}</td>
+                </tr>
+            
+              </table>
+            </div>

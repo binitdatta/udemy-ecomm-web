@@ -4,7 +4,10 @@ angular.module('udemyApp')
           method: 'GET',
           url: 'product-service/productsservice/v1/products'
       }).then(function(response) {
-    	  $scope.products = response.data;
+		  if(response.data && response.data.content){
+			   $scope.products = response.data.content;
+		  }
+    	 
     	  console.log($scope.products);
       }, function(response) {
     	  console.error('Error requesting races');

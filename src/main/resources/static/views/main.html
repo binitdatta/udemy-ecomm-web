@@ -11,11 +11,11 @@
                   <th>Type</th>
                   <th>Price</th>
                 </tr>
-                <tr ng-repeat="product in products">
-                  <td>{{product.id}}</td>
-                  <td>{{product.productName}}</td>
-                  <td>{{product.productType}}</td>
-                  <td>{{product.productPrice}}</td>
+                <tr ng-repeat="(key,val) in products">
+                  <td>{{val.id}}</td>
+                  <td>{{val.productName}}</td>
+                  <td>{{val.productType}}</td>
+                  <td>{{val.productPrice}}</td>
                 </tr>
             
               </table>

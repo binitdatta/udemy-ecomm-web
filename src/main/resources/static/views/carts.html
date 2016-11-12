@@ -1,0 +1,38 @@
+<div class="page-header">
+	<h3>Customer Information</h3>
+</div>
+<div class="col-md-12">
+<div class="alert alert-success  col-sm-6  col-md-6" role="alert">
+	<strong>Customer Name :</strong> {{user.firstName}} &nbsp;
+	{{user.lastName}}
+</div>
+<div class="alert alert-success  col-sm-6  col-md-6" role="alert">
+	<strong>Bonus Points :</strong> {{user.bonusPoints}}
+</div>
+<div class="alert alert-success  col-sm-6  col-md-6" role="alert">
+	<strong>Credit Amount :</strong> {{user.creditAmount}}
+</div>
+<div class="alert alert-success  col-sm-6  col-md-6" role="alert">
+	<strong>Member Since :</strong> {{user.memberSince}}
+</div>
+
+</div>
+
+<h3>Cart Items</h3>
+<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Price</th>
+			<th>Quantity</th>
+		</tr>
+		<tr ng-repeat="(key,val) in cartItems">
+			<td>{{val.product.productName}}</td>
+			<td>{{val.product.productType}}</td>
+			<td>{{val.product.productPrice}}</td>
+			<td>{{val.quantity}}</td>
+		</tr>
+
+	</table>
+</div>

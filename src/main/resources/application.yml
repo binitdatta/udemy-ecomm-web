@@ -9,6 +9,8 @@ eureka:
 zuul:
   routes:
     product-service: /product-service/**
+    cart-service: /cart-service/**
+    ordering-service: /ordering-service/**
 
 # Increase the Hystrix timeout to 60s (globally)
 hystrix:

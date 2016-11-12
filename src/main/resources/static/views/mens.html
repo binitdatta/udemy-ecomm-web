@@ -1,0 +1,18 @@
+<h3>Mens</h3>
+   <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>Product ID</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                </tr>
+                <tr ng-repeat="(key,val) in products">
+                  <td>{{val.id}}</td>
+                  <td>{{val.productName}}</td>
+                  <td>{{val.productType}}</td>
+                  <td>{{val.productPrice}}</td>
+                </tr>
+            
+              </table>
+            </div>

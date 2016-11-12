@@ -7,13 +7,30 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/mens.html', {
+        templateUrl: 'views/mens.html',
+        controller: 'MainCtrl'
+      })
+      .when('/womens.html', {
+        templateUrl: 'views/womens.html',
+        controller: 'MainCtrl'
+      })
+      .when('/cart.html', {
+        templateUrl: 'views/carts.html',
+        controller: 'CartCtrl'
+      })
+       .when('/pastorders.html', {
+        templateUrl: 'views/pastorders.html',
+        controller: 'OrderingCtrl'
+      }) 
       .otherwise({
         redirectTo: '/'
       });
+    $locationProvider.html5Mode(true);
   });
